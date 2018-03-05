@@ -1,0 +1,17 @@
+{%  extends 'base.html' %}
+{% block bodyBlog %}
+    <div class="col-sp-4">
+        <h1>This is homepage </h1>
+    <h1>{{ co }} entries found</h1>
+        {% for each in object %}
+            <h2>{{ each.title }}</h2>
+            <small>{{ each.created_date }}</small>
+            <p>{{ each.content | truncatechars:"5" }}</p>
+
+            {%   empty %}
+            <h1>No content to display</h1>
+
+        {% endfor %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block bodyBlock %}
+<form action="" method="post">
+{% csrf_token %}
+{{ post_list }}
+    <input type="submit" class="btn btn-success" value="Add Post">
+    </form>
+{% endblock %}
